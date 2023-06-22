@@ -1,12 +1,14 @@
 # Machine learning the Hubble Constant
-Scripts I have developed to measure the Hubble Constant (H0) from a given set of H(z) measurements using regression algorithms. 
-The goal is to create a benchmark of their performance on different H(z) data specifications - that is, different number of data points (Nz) and relative measurement uncertainties (sig). 
+Scripts I have developed to measure the Hubble Constant (H0) from a given set of H(z) measurements using machine learning (ML) regression algorithms. 
+The goal is to create a performance benchmark of these algorithms on measuring H0 given different H(z) data specifications - that is, different number of data points (Nz) and relative measurement uncertainties (sig). 
 
 This repository includes four scripts, which are
 - hz_sim_gen.py: Produces H(z) simulated data-sets assuming a fiducial model for different Nz and sig
 - H0_regression.py: Performs a regression analysis over the provided H(z) data for different machine learning (ML) algorithms using the scikit-learn package. So we can measure H0 from the reconstructed H(z) values by getting H(z=0). 
 - H0_stats.py: Computes the stats of the measured H0 values from a set of nsim simulations. This is necessary in order to estimate the uncertainty and bias-variance tradeoff (BVT) of these measurements
 - plotting_results.py: Produces H0 and BVT plots
+
+Examples of simulated H(z) data-sets produced using hz_sim_gen.py can be found in the input.zip file. 
 
 Some considerations to be taken into account:
 - Fiducial Cosmology assumes Planck 2018 (TT, TE, EE+lowE+lensing) best-fit
